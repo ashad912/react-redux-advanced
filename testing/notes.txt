@@ -1,0 +1,55 @@
+// First tests:
+
+// App.js
+
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">     
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+        <div>
+          Hi there!
+        </div>
+    </div>
+  );
+}
+
+export default App;
+
+
+// App.test.js
+
+import React from 'react';
+import { render } from '@testing-library/react';
+import App from './App';
+
+test('renders learn react link', () => {
+  const { getByText } = render(<App />);
+  const linkElement = getByText(/learn react/i);
+  expect(linkElement).toBeInTheDocument();
+  expect(document.querySelector('.App div').innerHTML).toContain('Hi there!')
+});
+
+// In __tests__ directory, there is no necessity to name file with 'test' or 'spec' keyword
+// However it is comfortable
+
+// Expect pattern: expect(<value_to_verify>).<matcher>(<desired_value>)
+
+// First example: App.test.js try to verify internal CommentBox content.
+// It is poor approach.
+
+// Installing enzyne to use advanced methods, useful for React
+
+// Enzyme API - Static, Shallow, Full DOM
+
+//Simulating events - provide a fake event object, force component to rerender!
