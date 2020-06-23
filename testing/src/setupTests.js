@@ -9,4 +9,11 @@
 import Enzyme from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 
+/////////////// 
+// CRA does not provide lastest version of Jest
+// Added manually MutationObserver for waitFor function
+import MutationObserver from '@sheerun/mutationobserver-shim'
+window.MutationObserver = MutationObserver
+///////////////
+
 Enzyme.configure({ adapter: new Adapter() })

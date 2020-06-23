@@ -1,10 +1,9 @@
 import React from 'react'
-import CommentBox from 'components/CommentBox'
-import Root from 'Root'
-
 import { render, fireEvent, waitFor, screen } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect' // To have extra methods like: toBeInTheDocument()
 
+import CommentBox from 'components/CommentBox'
+import Root from 'Root'
 
 
 beforeEach(() => {
