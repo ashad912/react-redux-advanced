@@ -17,6 +17,8 @@ beforeEach(() => {
             <CommentList />
         </Root>
     ) // wrapped = component
+
+    
 })
 
 it('creates one LI per comment', () => {

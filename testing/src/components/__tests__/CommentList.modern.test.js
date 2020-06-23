@@ -17,6 +17,7 @@ beforeEach(() => {
             <CommentList />
         </Root>
     )
+    
 
     screen.container = container
 })

@@ -1,15 +1,20 @@
 import React from 'react'
-import { connect } from 'react-redux'
+import * as actions from 'actions'
+import { connect, useSelector, useDispatch } from 'react-redux'
+
 // export default (props) => {
 //     return <div {...props}>Comment List</div>
 // }
 
 
-const CommentList =  (props) => {
+export default (props) => {
+
+    const comments = useSelector(state => state.comments)
+    const dispatch = useDispatch()
 
     const renderComments = () => {
-        return props.comments.map(comment => {
-            return <li role='comment' key={comment}>{comment}</li>
+        return comments.map((comment, index) => {
+            return <li role='comment' key={index} onClick={() => dispatch(actions.deleteComment(comment))}>{comment}</li>
         })
     }
 
@@ -22,10 +27,30 @@ const CommentList =  (props) => {
     )
 }
 
-const mapStateToProps = (state) => {
-    return {
-        comments: state.comments
-    }
-}
 
-export default connect(mapStateToProps)(CommentList)
+// Classic mapStateToProps/mapDispatchToProps version
+
+// const CommentList =  (props) => {
+
+//     const renderComments = () => {
+//         return props.comments.map((comment, index) => {
+//             return <li role='comment' key={index}>{comment}</li>
+//         })
+//     }
+
+//     return (
+//         <div data-testid={props['data-testid']}>
+//             <ul role='comment_list'>
+//                 {renderComments()}
+//             </ul>
+//         </div>
+//     )
+// }
+
+// const mapStateToProps = (state) => {
+//     return {
+//         comments: state.comments
+//     }
+// }
+
+// export default connect(mapStateToProps)(CommentList)

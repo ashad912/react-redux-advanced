@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-import { SAVE_COMMENT, FETCH_COMMENTS } from 'actions/types'
+import { SAVE_COMMENT, FETCH_COMMENTS, DELETE_COMMENT } from 'actions/types'
 
 export const saveComment = (comment) => {
     return {
@@ -16,5 +16,12 @@ export const fetchComments = () => {
     return {
         type: FETCH_COMMENTS,
         payload: res
+    }
+}
+
+export const deleteComment = (comment) => {
+    return {
+        type: DELETE_COMMENT,
+        payload: comment
     }
 }
