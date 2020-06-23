@@ -52,4 +52,40 @@ test('renders learn react link', () => {
 
 // Enzyme API - Static, Shallow, Full DOM
 
-//Simulating events - provide a fake event object, force component to rerender!
+// Simulating events - provide a fake event object, force component to rerender!
+
+// After adding redux action to CommentBox, tests fail! Why is that?
+
+// Redux connect function (in CommentBox component) try to find Provider component
+// In our test CommentBox is mounted by itself, withour any connection to Redux!
+// How to fix it? Easiest - add provider to testing component.
+// Better - make Root parent component to close redux connection!
+
+
+// Writing redux SAVE_COMMENT test - only with jest, without enzyme or react-testing-library
+
+// Testing CommentList. Getting stuff from Redux during tests.
+
+// Can use createStore function to pass init stuff to store
+// We need customizate Root.js
+
+// Text checking by enzyme - render returns CheerioWrapper (sth like JQuery)
+
+// React testing library needs to add role attribute
+
+// Fetching does not work it testing environment! We need to mock response.
+// We can use 'moxios' which is mocked axios.
+
+// Integration tests cover more lines of code.
+
+// List of jest-dom extend-expect functions: https://github.com/testing-library/jest-dom
+
+// Async redux: redux-promise vs redux-thunk.
+
+// Redux-thunk allows action creators to return a function.
+// Redux-promise allows action creators to return a promise.
+
+// Moxios: axios for testing
+
+// Redux thunk provide dispatching several times within one action creator.
+// That is why we have ex.: return async (dispatch) => {} 

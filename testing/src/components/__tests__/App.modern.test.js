@@ -1,11 +1,14 @@
 import React from 'react'
 import App from 'components/App'
 
+import Root from 'Root'
+
 import { render, fireEvent, waitFor, screen } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect' //To have extra methods like: toBeInTheDocument()
 
 beforeEach(() => {
-    render(<App />);
+    // Need to add Redux wrap here to work
+    render(<Root><App /></Root>);
 })
 
 // First sections ->

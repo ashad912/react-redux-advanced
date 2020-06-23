@@ -3,15 +3,21 @@ import React from 'react'
 import CommentBox from 'components/CommentBox'
 import { mount } from 'enzyme'
 
+import Root from 'Root'
+
 let wrapped
 beforeEach(() => {
     // Mount needs unmounting!
-    wrapped = mount(<CommentBox />) // wrapped = component
+    wrapped = mount(
+        <Root>
+            <CommentBox />
+        </Root>
+    ) // wrapped = component
 })
 
-it('has a text area and a button', () => {
+it('has a text area and two buttons', () => {
     expect(wrapped.find('textarea').length).toEqual(1)
-    expect(wrapped.find('button').length).toEqual(1)
+    expect(wrapped.find('button').length).toEqual(2)
 })
 
 describe('the text area', () => {

@@ -1,11 +1,14 @@
 import React from 'react'
 import CommentBox from 'components/CommentBox'
+import Root from 'Root'
 
 import { render, fireEvent, waitFor, screen } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect' // To have extra methods like: toBeInTheDocument()
 
+
+
 beforeEach(() => {
-    const {container} = render(<CommentBox />);
+    const {container} = render(<Root><CommentBox /></Root>);
     // By default screen object has not access to HTMLElement and regular DOM queries
     // Saving reference to container in screen object
     screen.container = container
@@ -13,6 +16,7 @@ beforeEach(() => {
 
 it('has a text area and a button', () => {    
     expect(screen.getByTestId('submit_button')).toBeInTheDocument();
+    expect(screen.getByRole('fetch')).toBeInTheDocument()
     expect(screen.getByTestId('comment_textarea')).toBeInTheDocument();
 })
 describe('the text area', () => {

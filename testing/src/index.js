@@ -21,6 +21,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './components/App'
+import Root from 'Root'
 
 
 // StrictMode currently helps with:
@@ -32,4 +33,10 @@ import App from './components/App'
 // Detecting legacy context API
 
 // Second argument, reference to DOM element on the page
-ReactDOM.render(<React.StrictMode><App/></React.StrictMode>, document.querySelector('#root'))
+ReactDOM.render(
+    <Root>
+        <React.StrictMode>
+            <App/>
+        </React.StrictMode>
+    </Root>, 
+document.querySelector('#root'))
