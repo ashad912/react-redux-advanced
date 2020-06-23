@@ -22,7 +22,8 @@ export default (props) => {
     // console.log(props.noexistantprop?.keepgoing?.ohyes)
     
     return (
-        <div data-testid={props['data-testid']}>
+        <div>
+            <h4>CommentList</h4>
             <ul role='comment_list'>
                 {renderComments()}
             </ul>

@@ -1,0 +1,11 @@
+// Passing props to Route component (React Browser Router): https://ui.dev/react-router-v4-pass-props-to-components/
+
+// File named in lowercase - by convention it has to export default function
+// File named in upperrcase - by convention it has to export default class
+
+// scaffold - rusztowanie
+
+// When we create HOC, we can attach mapStateToProps/mapDispatchToProps functions to WrappedComponent or HOC function itself.
+
+// Another HOC approach: export ... requireAuth(CommentBox)
+// Usually used as <Route ... component={requireAuth(CommentBox)}
