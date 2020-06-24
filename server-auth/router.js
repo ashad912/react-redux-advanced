@@ -1,5 +1,5 @@
 const passport = require('passport')
-const passportService = require('./services/passport')
+require('./services/passport')
 const Authentication = require('./controllers/authentication')
 
 // By default passport wants to make cookie based session for specific request
