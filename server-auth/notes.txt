@@ -1,0 +1,26 @@
+// Token 
+
+// Have to manually wire up
+// Can be sent to any domain
+
+// Cookie
+// Automatically included on all requests
+// Unique to each domain
+// Cannot to be sent to different domains - cannot be hijacked easily
+
+// bcrypt can hash pasword by auto-salt or generated-salt on separate function call
+
+// When we use generated-salt, encrypted password in db holds salt and hashed password
+
+// Salt is a key. Remember, bcrypt compares password only in hashed strategies
+
+// Passport has own ecosystem in node environment
+
+// Passport strategies
+// #1 - Verify user with a JWT
+// #2 - Verify user with a username and password
+
+// Used JWT for get endpoint
+// Used local strategy to get sign in (middleware for comparing passwords)
+
+// Local strategy need proper options: usernameField !

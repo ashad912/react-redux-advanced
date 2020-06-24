@@ -1,0 +1,12 @@
+// debugger statement! Pause browser on debugger statement
+// We can chain middlewares for Redux
+// We are going to create own async Redux middleware
+
+// Result of middleware has to pass once again through other middlewares
+// We need to create second action, we do not need to care about middlewares order
+
+// Redux author decided to structure redux middleware with three wrapped function
+
+// To check if sth is Promise, we look at .then prop
+
+// Dispatch starts entire process of sending action to reducer
