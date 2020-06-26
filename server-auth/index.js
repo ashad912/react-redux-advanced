@@ -1,6 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const passport = require('passport')
+const cors = require('cors')
+//const passport = require('passport')
 const http = require('http')
 
 const bodyParser = require('body-parser')
@@ -22,6 +23,7 @@ mongoose.connect('mongodb://localhost:27017/rr-advanced',
 app.use(morgan('combined'))
 // app.use(passport.initialize());
 // app.use(passport.session())
+// app.use(cors())
 app.use(bodyParser.json({ type: '*/*'}))
 router(app)
 

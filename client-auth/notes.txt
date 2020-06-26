@@ -1,0 +1,29 @@
+// fieldset html tag is used to group related elements in a form
+// fieldset tag draws a box around the related elements
+
+// Redux form work with classical mapping to props
+// To use hooks, we need additional plugin ex. "react-hook-form"
+
+// const func = () => {}
+// const func2 = () => {}
+
+// onClick={func(func2)} doest not invoke func2 immediately (func does), because it's reference
+
+// In Redux, actions funnels (leją się, rz. lejek) to middleware and then to reducers
+
+// Action creator -> Action -> Dispatch 'funnel' -> Middleware -> Reducers
+
+
+// CORS error (does not appear with proxy package.json setting)
+// Cross Origin Resource Sharing
+// Cannot send request from external domain
+// Browser checks if domain, subdomain or port of requests are different
+// If are, CORS comes to play
+// Browser send query to server, if is allowed to send requests from others domain?
+// Server respond, according to its CORS config
+// Browser presents the respond results to JS / user
+// You cannot (in no-hacky way) disable CORS in any browser!!!
+// CORS is browser mechanism 
+
+// What about Postman?
+// Postman does not care! Postman has not got CORS implemented!!!
